@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Nama Travel - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Nama Travel</h2>
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="deals.html">Deals</a>
+            <a href="destinations.html">Destinations</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <section>
+            <header class="top">
+                <h1>TRAVEL PANEL</h1>
+                <p>Your dream destination is just a journey away!</p>
+            </header>
+            
+
+            <section class="cards">
+                <div class="card">
+                    <p class="card-title">Number of Reservations</p>
+                    <p class="card-value" id="totalBookings">0</p>
+                </div>
+                <div class="card">
+                    <p class="card-title">Number of Passengers</p>
+                    <p class="card-value" id="totalTravelers">0</p>
+                </div>
+                <div class="card">
+                    <p class="card-title">Final Destination</p>
+                    <p class="card-value" id="lastDestination">-</p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Reservations</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Destination</th>
+                            <th>Travel Date</th>
+                            <th>Travelers</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="bookingTableBody"></tbody>
+                </table>
+            </section>
+
+            <!-- FORM -->
+            <section class="panel">
+                <h2>Add new reservation</h2>
+                <form id="bookingForm">
+                    <label>Client Name
+                        <input type="text" id="clientName" required>
+                    </label>
+                    <label>Destination
+                        <input type="text" id="destination" required>
+                    </label>
+                    <label>Date
+                        <input type="date" id="travelDate" required>
+                    </label>
+                    <label>Travelers
+                        <input type="number" id="travelers" min="1" value="1" required>
+                    </label>
+                    <button class="btn" type="submit">Add Reservation</button>
+                </form>
+            </section>
+        </section>
+
+    </main>
+</div>
+
+<script src="fetch.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

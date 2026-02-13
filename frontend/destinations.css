@@ -1,0 +1,173 @@
+⁠{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f5f5ff;
+    color: #222;
+}
+
+/* LAYOUT MENU SIDEBAR */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #343a78;
+    color: white;
+    padding: 16px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #e5e7ff;
+    font-size: 0.95rem;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 20px 24px;
+}
+
+/* HEADER */
+.top h1 {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.top p {
+    color: #555;
+    margin-bottom: 16px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+}
+
+.card-title {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.card-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* PANELS */
+.panel {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+    margin-bottom: 16px;
+}
+
+.panel h2 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th, td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background: #eef2ff;
+}
+
+/* FORM */
+.form-row {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 97%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* BUTTON */
+.btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    background: #4338ca;
+}
+
+/* FOR PHONE */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
